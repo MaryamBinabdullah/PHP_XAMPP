@@ -1,0 +1,296 @@
+:root {
+  --blue-shade-600: hsla(170, 100%, 50%, 0.2);
+  --clr-dark: hsl(0, 0%, 20%);
+  --clr-white: hsl(0, 0%, 73%);
+  --clr-red: #ff4545;
+  --clr-green: #00ff99;
+  --clr-blue: #006aff;
+  --clr-pink: #ff0095;
+  --clr-lightb: #47ffe0;
+}
+/* use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  /* keeping my font size 100% to enable anyone to resize on their screens */
+  font-size: 100%;
+  /* you can turn of the outline comment bellow and see what you get it's so usefull if your a developer !!!! */
+  /* outline: 1px solid red !important; */
+}
+/* remove margin */
+* {
+  margin: 0;
+}
+/* sort height */
+html,
+body {
+  height: 100%;
+}
+/* add accesisble line height */
+body {
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+/* media defults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/* remove bult in form typeography */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/* avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5 {
+  overflow-wrap: break-word;
+}
+h1,
+h2,
+h3 {
+  line-height: 1;
+}
+/* genral styling */
+body {
+  display: flex;
+  height: 100vh;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  background: hsl(0, 0%, 8%);
+}
+/* Form Styles */
+.the-form {
+  position: relative;
+  width: 370px;
+  height: auto;
+  background: hsl(0, 0%, 11%);
+  padding: 40px 35px 60px;
+  border-radius: 5px;
+}
+/* spin animation */
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+.the-form::after,
+.the-form::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: conic-gradient(
+    from var(--angle),
+    var(--clr-red),
+    var(--clr-green),
+    var(--clr-blue),
+    var(--clr-pink),
+    var(--clr-red)
+  );
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: -1;
+  padding: 5px;
+  border-radius: 5px;
+  animation: 3s spin linear infinite;
+}
+.the-form::before {
+  filter: blur(1.5rem);
+  opacity: o.5;
+}
+@keyframes spin {
+  from {
+    --angle: 0deg;
+  }
+  to {
+    --angle: 360deg;
+  }
+}
+/* In Form Styles */
+.text {
+  font-size: 30px;
+  color: hsl(0, 0%, 78%);
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+form {
+  margin-top: 40px;
+}
+form .input-group {
+  margin-top: 20px;
+  display: flex;
+}
+.input-group .fas {
+  height: 50px;
+  width: 60px;
+  color: var(--clr-white);
+  font-size: 20px;
+  line-height: 50px;
+  border: 1px solid hsl(0, 0%, 27%);
+  border-right: none;
+  border-radius: 5px 0 0 5px;
+  background: linear-gradient(var(--clr-dark), hsl(0, 0%, 13%));
+}
+.btn-edit,
+.btn-del,
+.btn-new,
+.input-group input,
+form button {
+  width: 100%;
+  outline: none;
+  font-size: 19px;
+  color: var(--clr-white);
+  padding: 0 15px;
+  border-radius: 0 5px 5px 0;
+  border: 1px solid hsl(0, 0%, 27%);
+  caret-color: var(--clr-lightb);
+  background: linear-gradient(var(--clr-dark), hsl(0, 0%, 13%));
+}
+.input-group input,
+form button {
+  height: 50px;
+}
+/* glow animation */
+input:focus {
+  color: var(--clr-lightb);
+  box-shadow: 0 0 5px var(--blue-shade-600),
+    inset 0 0 5px hsla(170, 100%, 50%, 0.1);
+  background: linear-gradient(hsl(120, 6%, 21%), hsl(120, 11%, 15%));
+  animation: glow 0.8s ease-out infinite alternate;
+}
+@keyframes glow {
+  0% {
+    border-color: var(--clr-lightb);
+    box-shadow: 0 0 5px var(--blue-shade-600),
+      inset 0 0 5px hsla(0, 0%, 0%, 0.1);
+  }
+  100% {
+    border-color: hsl(170, 100%, 70%);
+    box-shadow: 0 0 20px hsla(170, 100%, 50%, 0.6);
+  }
+}
+/* button styles */
+.btn {
+  margin-top: 30px;
+  border-radius: 5px !important;
+  font-weight: 600;
+  letter-spacing: 1px;
+  cursor: pointer;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.btn:hover {
+  color: var(--clr-lightb);
+  border: 1px solid var(--clr-lightb);
+  box-shadow: 0 0 5px hsla(170, 100%, 50%, 0.3), 0 0 10px var(--blue-shade-600),
+    0 0 15px hsla(170, 100%, 50%, 0.1), 0 2px 0 hsl(0, 0%, 0%);
+}
+.link {
+  margin-top: 25px;
+  color: var(--clr-white);
+  font-size: larger;
+}
+.link a {
+  color: var(--clr-lightb);
+  text-decoration: none;
+}
+.link a:hover {
+  text-decoration: underline;
+}
+/* Table form page */
+.table {
+  color: var(--clr-white);
+  border-collapse: collapse;
+}
+.the-form.tb {
+  position: relative;
+  width: 674px;
+  height: auto;
+  background: hsl(0, 0%, 11%);
+  padding: 40px 35px 60px;
+  border-radius: 5px;
+}
+.the-form.tb {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+th {
+  color: var(--clr-lightb);
+}
+.btn-new {
+  padding: 0.5rem 4rem;
+  margin-top: 0px;
+  width: 19rem;
+}
+.btn-edit,
+.btn-del {
+  font-size: initial;
+}
+.btn-edit {
+  padding: 1px 18px;
+}
+.btn.btn-del {
+  padding: 1px 4px;
+}
+td {
+  padding: 0.5rem;
+}
+tr {
+  outline: 1px solid aliceblue;
+}
+/* other realated styles */
+
+/* error & success situtation */
+.error,
+.success {
+  display: block;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 1rem;
+  align-items: center;
+  width: 90%;
+  height: 1.7rem;
+  margin-top: 30px;
+  border-radius: 5px !important;
+  font-weight: 600;
+  background: var(--clr-dark);
+  color: var(--clr-lightb);
+
+  &:hover {
+    /* the border */
+
+    border: 1px solid var(--clr-lightb);
+    box-shadow: 0 0 5px hsla(170, 100%, 50%, 0.3),
+      0 0 10px var(--blue-shade-600), 0 0 15px hsla(170, 100%, 50%, 0.1),
+      0 2px 0 hsl(0, 0%, 0%);
+  }
+}
+/* X svg styles am using javascript with this*/
+#x svg {
+  fill: #151515;
+  background-color: var(--clr-dark);
+  width: 20px;
+  height: 20px;
+  transition: 2ms ease-out;
+  &:hover {
+    fill: var(--clr-lightb);
+  }
+}
