@@ -30,11 +30,16 @@ This project is a simple CRUD (Create, Read, Update, Delete) website built using
 You can view and delete users from the table.
 
 This is the login page once you are registered you will be able to access this page heres a screenshot
-![login page screenshot](screenshots/Screenshot_Log_In_System.png)
+
+![login page screenshot](LoginForm/screenshots/Screenshot_Log_In_System.png)
+
 after your loged in you will be take to what i like to call a home page 
-![Home page screenshot](Screenshot_Home.png)
+
+![Home page screenshot](LoginForm/screenshots/Screenshot_Home.png)
+
 You'll also be able to access the table where you can veiw all the registered users and there information and delete users too
-![Table page screenshot](screenshots/Screenshot_Table_Db.png)
+
+![Table page screenshot](LoginForm/screenshots/Screenshot_Table_Db.png)
 
 Feel free to improve my work and do share with me any updates :smile: !!
 Things you can improve :
