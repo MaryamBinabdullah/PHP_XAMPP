@@ -102,11 +102,10 @@ This project is licensed under the MIT License.
 
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
-- Maryam dev - [maryam]
-- Find me on github [@Code-inks]
-- Telegram [@Code_ink]
+- Developed By - [maryam]
+- Find me on github [@MaryamBinabdullah]
 
-Project Link: [https://github.com/Code-inks](https://github.com/Code-inks/PHP_XAMPP/)
+Project Link: [https://github.com/MaryamBinabdullah](https://github.com/MaryamBinabdullah/PHP_XAMPP/)
 
 - the edit btn is a bit wanky (a bit is an under statement 0_0)
 - i hope my codes aren't a big mess i tried to keep the whole thing tidy and to point as much as possible
